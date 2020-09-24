@@ -1,9 +1,9 @@
-package com.online.shopping.controller;
+package com.shopping.content.controller;
 
 import com.online.shopping.entity.PageResult;
 import com.online.shopping.entity.Result;
-import com.online.shopping.pojo.TbItemCat;
-import com.online.shopping.service.ItemCatService;
+import com.online.shopping.pojo.TbContent;
+import com.shopping.content.service.ContentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,30 +15,46 @@ import java.util.List;
  * controller
  */
 @RestController
-@RequestMapping("/itemCat-ms")
-public class ItemCatController {
+@RequestMapping("/content-ms")
+public class ContentController {
 
 	@Autowired
-	private ItemCatService itemCatService;
+	private ContentService contentService;
+	
+	
+	@RequestMapping("/findByCategoryId")
+	public List<TbContent> findByCategoryId(Long categoryId){
+		return contentService.findByCategoryId(categoryId);
+	}
 	
 	/**
-	 * 分页
+	 * 返回全部列表
+	 * @return
+	 */
+	@RequestMapping("/findAll")
+	public List<TbContent> findAll(){
+		return contentService.findAll();
+	}
+	
+	
+	/**
+	 * 返回全部列表
 	 * @return
 	 */
 	@RequestMapping("/findPage")
 	public PageResult findPage(int page, int rows){
-		return itemCatService.findPage(page, rows);
+		return contentService.findPage(page, rows);
 	}
 	
 	/**
 	 * 增加
-	 * @param itemCat
+	 * @param content
 	 * @return
 	 */
 	@RequestMapping("/add")
-	public Result add(@RequestBody TbItemCat itemCat){
+	public Result add(@RequestBody TbContent content){
 		try {
-			itemCatService.add(itemCat);
+			contentService.add(content);
 			return new Result(true, "增加成功");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -48,13 +64,13 @@ public class ItemCatController {
 	
 	/**
 	 * 修改
-	 * @param itemCat
+	 * @param content
 	 * @return
 	 */
 	@RequestMapping("/update")
-	public Result update(@RequestBody TbItemCat itemCat){
+	public Result update(@RequestBody TbContent content){
 		try {
-			itemCatService.update(itemCat);
+			contentService.update(content);
 			return new Result(true, "修改成功");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -68,8 +84,8 @@ public class ItemCatController {
 	 * @return
 	 */
 	@RequestMapping("/findOne")
-	public TbItemCat findOne(Long id){
-		return itemCatService.findOne(id);		
+	public TbContent findOne(Long id){
+		return contentService.findOne(id);		
 	}
 	
 	/**
@@ -78,9 +94,9 @@ public class ItemCatController {
 	 * @return
 	 */
 	@RequestMapping("/delete")
-	public Result delete(Long[] ids){
+	public Result delete(Long [] ids){
 		try {
-			itemCatService.delete(ids);
+			contentService.delete(ids);
 			return new Result(true, "删除成功");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -88,20 +104,16 @@ public class ItemCatController {
 		}
 	}
 	
-	/**
+		/**
 	 * 查询+分页
-	 * @param itemCat
+	 * @param content
 	 * @param page
 	 * @param rows
 	 * @return
 	 */
 	@RequestMapping("/search")
-	public PageResult search(@RequestBody TbItemCat itemCat, int page, int rows  ){
-		return itemCatService.findPage(itemCat, page, rows);		
+	public PageResult search(@RequestBody TbContent content, int page, int rows  ){
+		return contentService.findPage(content, page, rows);		
 	}
 	
-	@RequestMapping("/findByParentId")
-	public List<TbItemCat> findByParentId(Long parentId){
-		return itemCatService.findByParentId(parentId);
-	}
 }

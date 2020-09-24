@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="shopping-content-ws" />
         <module name="shopping-eurekaserver" />
         <module name="shopping-manager-ws" />
         <module name="shopping-pojo" />
@@ -13,6 +14,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="shopping-content-ws" target="1.8" />
       <module name="shopping-eurekaserver" target="1.8" />
       <module name="shopping-manager-ws" target="1.8" />
       <module name="shopping-parent" target="1.8" />

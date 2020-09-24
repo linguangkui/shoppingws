@@ -12,6 +12,7 @@
         <module>shopping-pojo</module>
         <module>shopping-manager-ws</module>
         <module>shopping-zuul</module>
+        <module>shopping-content-ws</module>
     </modules>
     <packaging>pom</packaging>
 

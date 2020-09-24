@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/jd-shopping.iml" filepath="$PROJECT_DIR$/.idea/jd-shopping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping-parent/shopping-content-ws/shopping-content-ws.iml" filepath="$PROJECT_DIR$/shopping-parent/shopping-content-ws/shopping-content-ws.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-parent/shopping-eurekaserver/shopping-eurekaserver.iml" filepath="$PROJECT_DIR$/shopping-parent/shopping-eurekaserver/shopping-eurekaserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-parent/shopping-manager-ws/shopping-manager-ws.iml" filepath="$PROJECT_DIR$/shopping-parent/shopping-manager-ws/shopping-manager-ws.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-parent/shopping-parent.iml" filepath="$PROJECT_DIR$/shopping-parent/shopping-parent.iml" />
