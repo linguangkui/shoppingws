@@ -6,7 +6,7 @@ eureka:
       defaultZone: http://localhost:8081/eureka
 spring:
   application: 
-    name: 'shopping-content-ws'
+    name: 'shopping-content-ms'
   datasource:
     username: root
     password: root
