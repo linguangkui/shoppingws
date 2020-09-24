@@ -30,7 +30,12 @@ public class TypeTemplateServiceImpl implements TypeTemplateService {
 	
 	@Autowired
 	private TbSpecificationOptionMapper specificationOptionMapper;
-	
+
+	@Override
+	public List<TbTypeTemplate> findAll() {
+		return typeTemplateMapper.selectByExample(null);
+	}
+
 	/**
 	 * 按分页查询
 	 */

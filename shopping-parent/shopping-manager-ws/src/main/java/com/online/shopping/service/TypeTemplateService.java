@@ -12,6 +12,11 @@ import java.util.Map;
 public interface TypeTemplateService {
 
 	/**
+	 * 返回全部列表
+	 * @return
+	 */
+	public List<TbTypeTemplate> findAll();
+	/**
 	 * 返回分页列表
 	 * @return
 	 */

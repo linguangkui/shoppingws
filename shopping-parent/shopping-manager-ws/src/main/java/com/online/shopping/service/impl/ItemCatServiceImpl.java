@@ -11,6 +11,7 @@ import com.online.shopping.service.ItemCatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -75,13 +76,17 @@ public class ItemCatServiceImpl implements ItemCatService {
 		TbItemCatExample example=new TbItemCatExample();
 		Criteria criteria = example.createCriteria();
 		
-		if(itemCat!=null){			
+		if(itemCat!=null){
+			if (itemCat.getParentId()!=null){
+				criteria.andParentIdEqualTo(itemCat.getParentId());
+			}else {
+				criteria.andParentIdEqualTo(0L);
+			}
 			if(itemCat.getName()!=null && itemCat.getName().length()>0){
 				criteria.andNameLike("%"+itemCat.getName()+"%");
 			}
-	
+
 		}
-		
 		Page<TbItemCat> page= (Page<TbItemCat>)itemCatMapper.selectByExample(example);
 		return new PageResult(page.getTotal(), page.getResult());
 	}

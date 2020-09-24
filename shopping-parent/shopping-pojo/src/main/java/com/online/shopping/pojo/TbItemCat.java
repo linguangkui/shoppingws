@@ -1,6 +1,7 @@
 package com.online.shopping.pojo;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class TbItemCat implements Serializable{
     private Long id;
@@ -10,6 +11,7 @@ public class TbItemCat implements Serializable{
     private String name;
 
     private Long typeId;
+    private List parentIds;
 
     public Long getId() {
         return id;
@@ -41,5 +43,13 @@ public class TbItemCat implements Serializable{
 
     public void setTypeId(Long typeId) {
         this.typeId = typeId;
+    }
+
+    public List getParentIds() {
+        return parentIds;
+    }
+
+    public void setParentIds(List parentIds) {
+        this.parentIds = parentIds;
     }
 }

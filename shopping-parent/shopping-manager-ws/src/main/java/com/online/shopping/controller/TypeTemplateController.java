@@ -21,9 +21,21 @@ public class TypeTemplateController {
 
 	@Autowired
 	private TypeTemplateService typeTemplateService;
-	
+
+
 	/**
 	 * 返回全部列表
+	 * @return
+	 */
+	@RequestMapping("/findAll")
+	public List<TbTypeTemplate> findAll(){
+		return typeTemplateService.findAll();
+	}
+
+	/**
+	 * 分页
+	 * @param page
+	 * @param rows
 	 * @return
 	 */
 	@RequestMapping("/findPage")
