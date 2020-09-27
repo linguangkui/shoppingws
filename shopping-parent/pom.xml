@@ -13,6 +13,7 @@
         <module>shopping-manager-ws</module>
         <module>shopping-zuul</module>
         <module>shopping-content-ws</module>
+        <module>shopping-search-ws</module>
     </modules>
     <packaging>pom</packaging>
 

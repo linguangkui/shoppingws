@@ -10,6 +10,7 @@
         <module name="shopping-eurekaserver" />
         <module name="shopping-manager-ws" />
         <module name="shopping-pojo" />
+        <module name="shopping-search-ws" />
         <module name="shopping-zuul" />
       </profile>
     </annotationProcessing>
@@ -19,6 +20,7 @@
       <module name="shopping-manager-ws" target="1.8" />
       <module name="shopping-parent" target="1.8" />
       <module name="shopping-pojo" target="1.8" />
+      <module name="shopping-search-ws" target="1.8" />
       <module name="shopping-zuul" target="1.8" />
     </bytecodeTargetLevel>
   </component>

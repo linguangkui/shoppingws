@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/shopping-parent/shopping-manager-ws/shopping-manager-ws.iml" filepath="$PROJECT_DIR$/shopping-parent/shopping-manager-ws/shopping-manager-ws.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-parent/shopping-parent.iml" filepath="$PROJECT_DIR$/shopping-parent/shopping-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-parent/shopping-pojo/shopping-pojo.iml" filepath="$PROJECT_DIR$/shopping-parent/shopping-pojo/shopping-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping-parent/shopping-search-ws/shopping-search-ws.iml" filepath="$PROJECT_DIR$/shopping-parent/shopping-search-ws/shopping-search-ws.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-parent/shopping-zuul/shopping-zuul.iml" filepath="$PROJECT_DIR$/shopping-parent/shopping-zuul/shopping-zuul.iml" />
     </modules>
   </component>
