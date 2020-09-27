@@ -14,7 +14,6 @@ import java.util.Date;
 @RestController
 public class UploadController {
 	
-	
 	@Value("${minio.endpoint}")
 	private String endpoint;     //http://192.168.1.5:9000 #MinIO服务所在地址
 	@Value("${minio.bucketName}")
