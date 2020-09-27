@@ -1,4 +1,4 @@
-package com.shopping.content.controller;
+package com.shopping.search.controller;
 
 import com.online.shopping.entity.Result;
 import io.minio.MinioClient;

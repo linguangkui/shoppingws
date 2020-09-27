@@ -1,4 +1,4 @@
-package com.shopping.content.service;
+package com.shopping.search.service;
 
 import com.online.shopping.entity.PageResult;
 import com.online.shopping.pojo.TbContentCategory;

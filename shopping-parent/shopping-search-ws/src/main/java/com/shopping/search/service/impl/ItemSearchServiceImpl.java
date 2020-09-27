@@ -1,7 +1,7 @@
-package com.shopping.content.service.impl;
+package com.shopping.search.service.impl;
 
 import com.online.shopping.pojo.TbItem;
-import com.shopping.content.service.ItemSearchService;
+import com.shopping.search.service.ItemSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.solr.core.SolrTemplate;
 import org.springframework.data.solr.core.query.Criteria;

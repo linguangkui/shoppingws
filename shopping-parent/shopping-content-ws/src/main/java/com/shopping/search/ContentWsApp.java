@@ -1,4 +1,4 @@
-package com.shopping.content;
+package com.shopping.search;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

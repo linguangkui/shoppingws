@@ -1,4 +1,4 @@
-package com.shopping.content.service.impl;
+package com.shopping.search.service.impl;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
@@ -6,8 +6,8 @@ import com.online.shopping.entity.PageResult;
 import com.online.shopping.pojo.TbContentCategory;
 import com.online.shopping.pojo.TbContentCategoryExample;
 import com.online.shopping.pojo.TbContentCategoryExample.Criteria;
-import com.shopping.content.mapper.TbContentCategoryMapper;
-import com.shopping.content.service.ContentCategoryService;
+import com.shopping.search.mapper.TbContentCategoryMapper;
+import com.shopping.search.service.ContentCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.shopping.content.mapper;
+package com.shopping.search.mapper;
 
 import com.online.shopping.pojo.TbContent;
 import com.online.shopping.pojo.TbContentExample;

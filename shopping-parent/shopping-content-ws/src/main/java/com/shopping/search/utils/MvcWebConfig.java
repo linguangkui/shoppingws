@@ -1,4 +1,4 @@
-package com.shopping.content.utils;
+package com.shopping.search.utils;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

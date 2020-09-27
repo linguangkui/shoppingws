@@ -1,4 +1,4 @@
-package com.shopping.content.service;
+package com.shopping.search.service;
 
 import java.util.List;
 import java.util.Map;

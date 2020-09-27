@@ -1,4 +1,4 @@
-package com.shopping.content.service.impl;
+package com.shopping.search.service.impl;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
@@ -6,8 +6,8 @@ import com.online.shopping.entity.PageResult;
 import com.online.shopping.pojo.TbContent;
 import com.online.shopping.pojo.TbContentExample;
 import com.online.shopping.pojo.TbContentExample.Criteria;
-import com.shopping.content.mapper.TbContentMapper;
-import com.shopping.content.service.ContentService;
+import com.shopping.search.mapper.TbContentMapper;
+import com.shopping.search.service.ContentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
