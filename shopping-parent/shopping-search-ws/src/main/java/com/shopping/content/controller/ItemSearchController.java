@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 
 @RestController
+@RequestMapping("/itemsearch-ms")
 public class ItemSearchController {
     @Autowired
     private ItemSearchService itemSearchService;
