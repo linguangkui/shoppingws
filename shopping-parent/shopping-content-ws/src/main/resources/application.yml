@@ -26,4 +26,3 @@ minio:
 file:
   staticAccessPath: '/upload/**'
   uploadFolder: 'E:\\file'
- 
