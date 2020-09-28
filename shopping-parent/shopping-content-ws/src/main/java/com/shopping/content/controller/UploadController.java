@@ -60,8 +60,8 @@ public class UploadController {
 //	@RequestMapping("/uploadFile")
 //	public Result uploadFile(MultipartFile file){
 //		try {
-//			//设置虚拟的映射路径 ---> D:/file
-//			String path="D:/file";
+//			//设置虚拟的映射路径 ---> E:/file
+//			String path="E:/file";
 //			String url = "";
 //			if (file!=null && file.getSize()>0) {
 //				file.transferTo(new File(path, file.getOriginalFilename()));
