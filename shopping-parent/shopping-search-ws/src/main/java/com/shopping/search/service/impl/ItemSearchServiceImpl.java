@@ -16,34 +16,39 @@ import java.util.Map;
 
 @Service
 public class ItemSearchServiceImpl implements ItemSearchService {
-    @Autowired
-    private SolrTemplate solrTemplate;
-    @Override
-    public Map search(Map searchMap) {
-        Map map = new HashMap();
 
-        Query query = new SimpleQuery("*:*");
-        Criteria criteria = new Criteria("item_keywords").is(searchMap.get("keywords"));
-        query.addCriteria(criteria);
+	@Autowired  // SolrTemplate是默认创建的bean,直接引用即可
+	private SolrTemplate solrTemplate;
+	
+	@Override
+	public Map search(Map searchMap) {
+		Map map=new HashMap();
+		
+		Query query=new SimpleQuery("*:*");
+		//item_keywords是solr的业务字段
+		Criteria criteria=new Criteria("item_keywords").is(searchMap.get("keywords"));
+		query.addCriteria(criteria);
+		
+		ScoredPage<TbItem> page = solrTemplate.queryForPage("collection1",query, TbItem.class);
+				
+		map.put("rows", page.getContent());
+		 
+		return map;
+	}
+	
+	@Override
+	public void importList(List list) {
+		solrTemplate.saveBeans("collection1", list);
+		solrTemplate.commit("collection1");
+	}
 
-        ScoredPage<TbItem> items = solrTemplate.queryForPage("collection1", query, TbItem.class);
-        map.put("rows",items.getContent());
-        return map;
-    }
+	@Override
+	public void deleteByGoodsIds(List goodsIds) {				
+		Query query=new SimpleQuery("*:*");		
+		Criteria criteria=new Criteria("item_goodsid").in(goodsIds);
+		query.addCriteria(criteria);		
+		solrTemplate.delete("collection1",query);
+		solrTemplate.commit("collection1");
+	}
 
-    @Override
-    public void importList(List list) {
-        solrTemplate.saveBeans("collection1",list);
-        solrTemplate.commit("collection1");
-    }
-
-    @Override
-    public void deleteByGoodsIds(List goodsIds) {
-        Query query = new SimpleQuery("*:*");
-        Criteria criteria = new Criteria("item_goodsid").in(goodsIds);
-        query.addCriteria(criteria);
-
-        solrTemplate.delete("collection1",query);
-        solrTemplate.commit("collection1");
-    }
 }

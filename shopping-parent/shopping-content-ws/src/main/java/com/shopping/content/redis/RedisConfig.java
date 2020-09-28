@@ -1,4 +1,4 @@
-package com.shopping.search.redis;
+package com.shopping.content.redis;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

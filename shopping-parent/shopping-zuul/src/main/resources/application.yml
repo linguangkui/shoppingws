@@ -16,8 +16,8 @@ zuul:
       path: /shopping-content/**
       service-id: shopping-content-ms
     api-search:
-      path: /shopping-search/**
-      service-id: shopping-search-ms
+      path: /shopping-content/**
+      service-id: shopping-content-ms
     api-page:
       path: /shopping-page/**
       service-id: shopping-page-ms

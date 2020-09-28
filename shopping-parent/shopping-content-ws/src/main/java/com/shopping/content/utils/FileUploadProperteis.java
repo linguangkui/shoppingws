@@ -1,4 +1,4 @@
-package com.shopping.search.utils;
+package com.shopping.content.utils;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

@@ -1,9 +1,9 @@
-package com.shopping.search.controller;
+package com.shopping.content.controller;
 
 import com.online.shopping.entity.PageResult;
 import com.online.shopping.entity.Result;
-import com.online.shopping.pojo.TbContent;
-import com.shopping.search.service.ContentService;
+import com.online.shopping.pojo.TbContentCategory;
+import com.shopping.content.service.ContentCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,25 +15,19 @@ import java.util.List;
  * controller
  */
 @RestController
-@RequestMapping("/content-ms")
-public class ContentController {
+@RequestMapping("/contentCategory-ms")
+public class ContentCategoryController {
 
 	@Autowired
-	private ContentService contentService;
-	
-	
-	@RequestMapping("/findByCategoryId")
-	public List<TbContent> findByCategoryId(Long categoryId){
-		return contentService.findByCategoryId(categoryId);
-	}
+	private ContentCategoryService contentCategoryService;
 	
 	/**
 	 * 返回全部列表
 	 * @return
 	 */
 	@RequestMapping("/findAll")
-	public List<TbContent> findAll(){
-		return contentService.findAll();
+	public List<TbContentCategory> findAll(){
+		return contentCategoryService.findAll();
 	}
 	
 	
@@ -43,18 +37,18 @@ public class ContentController {
 	 */
 	@RequestMapping("/findPage")
 	public PageResult findPage(int page, int rows){
-		return contentService.findPage(page, rows);
+		return contentCategoryService.findPage(page, rows);
 	}
 	
 	/**
 	 * 增加
-	 * @param content
+	 * @param contentCategory
 	 * @return
 	 */
 	@RequestMapping("/add")
-	public Result add(@RequestBody TbContent content){
+	public Result add(@RequestBody TbContentCategory contentCategory){
 		try {
-			contentService.add(content);
+			contentCategoryService.add(contentCategory);
 			return new Result(true, "增加成功");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -64,13 +58,13 @@ public class ContentController {
 	
 	/**
 	 * 修改
-	 * @param content
+	 * @param contentCategory
 	 * @return
 	 */
 	@RequestMapping("/update")
-	public Result update(@RequestBody TbContent content){
+	public Result update(@RequestBody TbContentCategory contentCategory){
 		try {
-			contentService.update(content);
+			contentCategoryService.update(contentCategory);
 			return new Result(true, "修改成功");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -84,8 +78,8 @@ public class ContentController {
 	 * @return
 	 */
 	@RequestMapping("/findOne")
-	public TbContent findOne(Long id){
-		return contentService.findOne(id);		
+	public TbContentCategory findOne(Long id){
+		return contentCategoryService.findOne(id);		
 	}
 	
 	/**
@@ -96,7 +90,7 @@ public class ContentController {
 	@RequestMapping("/delete")
 	public Result delete(Long [] ids){
 		try {
-			contentService.delete(ids);
+			contentCategoryService.delete(ids);
 			return new Result(true, "删除成功");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -104,16 +98,16 @@ public class ContentController {
 		}
 	}
 	
-		/**
+	/**
 	 * 查询+分页
-	 * @param content
+	 * @param contentCategory
 	 * @param page
 	 * @param rows
 	 * @return
 	 */
 	@RequestMapping("/search")
-	public PageResult search(@RequestBody TbContent content, int page, int rows  ){
-		return contentService.findPage(content, page, rows);		
+	public PageResult search(@RequestBody TbContentCategory contentCategory, int page, int rows  ){
+		return contentCategoryService.findPage(contentCategory, page, rows);		
 	}
 	
 }

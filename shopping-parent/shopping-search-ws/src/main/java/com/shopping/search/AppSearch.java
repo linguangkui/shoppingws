@@ -15,15 +15,17 @@ import org.springframework.data.solr.core.SolrTemplate;
 public class AppSearch {
 
 	public static void main(String[] args) {
+		
 		SpringApplication.run(AppSearch.class, args);
 	}
 
-	@Autowired
-	private SolrClient solrClient;
-
-	@Bean
-	public SolrTemplate solrTemplate() {
-		return new SolrTemplate(solrClient);
-
-	}
+	
+//	@Autowired
+//	private SolrClient solrClient;
+//
+//	@Bean
+//	public SolrTemplate solrTemplate() {
+//		return new SolrTemplate(solrClient);
+//
+//	}
 }

@@ -11,11 +11,14 @@ import java.util.Map;
 @RestController
 @RequestMapping("/itemsearch-ms")
 public class ItemSearchController {
-    @Autowired
-    private ItemSearchService itemSearchService;
+	
+	@Autowired
+	private ItemSearchService itemSearchService;
+	
+	@RequestMapping("/search")
+	public Map search(@RequestBody Map searchMap){
+		System.out.println(searchMap);
+		return itemSearchService.search(searchMap);		
+	}
 
-    @RequestMapping("/search")
-    public Map search(@RequestBody Map searchMap){
-        return itemSearchService.search(searchMap);
-    }
 }

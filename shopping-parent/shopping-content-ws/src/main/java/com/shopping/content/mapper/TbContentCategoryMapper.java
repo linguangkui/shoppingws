@@ -1,4 +1,4 @@
-package com.shopping.search.mapper;
+package com.shopping.content.mapper;
 
 
 import com.online.shopping.pojo.TbContentCategory;
