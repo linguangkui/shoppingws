@@ -3,6 +3,7 @@ package com.shopping.search.service.impl;
 import com.online.shopping.pojo.TbItem;
 import com.shopping.search.service.ItemSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.solr.core.SolrTemplate;
 import org.springframework.data.solr.core.query.Criteria;
 import org.springframework.data.solr.core.query.Query;
@@ -26,13 +27,12 @@ public class ItemSearchServiceImpl implements ItemSearchService {
 		
 		Query query=new SimpleQuery("*:*");
 		//item_keywords是solr的业务字段
-		Criteria criteria=new Criteria("item_keywords").is(searchMap.get("keywords"));
+		Criteria criteria=new Criteria("item_title").is(searchMap.get("keywords"));
 		query.addCriteria(criteria);
-		
-		ScoredPage<TbItem> page = solrTemplate.queryForPage("collection1",query, TbItem.class);
-				
+
+		Page<TbItem> page = solrTemplate.query("collection1", query, TbItem.class);
+
 		map.put("rows", page.getContent());
-		 
 		return map;
 	}
 	
