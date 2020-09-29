@@ -128,7 +128,7 @@ public class GoodsController {
 		}
 	}
 	
-		/**
+	/**
 	 * 查询+分页
 	 * @param goods
 	 * @param page
