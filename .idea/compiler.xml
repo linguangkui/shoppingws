@@ -9,6 +9,7 @@
         <module name="shopping-content-ws" />
         <module name="shopping-eurekaserver" />
         <module name="shopping-manager-ws" />
+        <module name="shopping-page-ws" />
         <module name="shopping-pojo" />
         <module name="shopping-search-ws" />
         <module name="shopping-zuul" />
@@ -18,6 +19,7 @@
       <module name="shopping-content-ws" target="1.8" />
       <module name="shopping-eurekaserver" target="1.8" />
       <module name="shopping-manager-ws" target="1.8" />
+      <module name="shopping-page-ws" target="1.8" />
       <module name="shopping-parent" target="1.8" />
       <module name="shopping-pojo" target="1.8" />
       <module name="shopping-search-ws" target="1.8" />

@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/shopping-parent/shopping-content-ws/shopping-content-ws.iml" filepath="$PROJECT_DIR$/shopping-parent/shopping-content-ws/shopping-content-ws.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-parent/shopping-eurekaserver/shopping-eurekaserver.iml" filepath="$PROJECT_DIR$/shopping-parent/shopping-eurekaserver/shopping-eurekaserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-parent/shopping-manager-ws/shopping-manager-ws.iml" filepath="$PROJECT_DIR$/shopping-parent/shopping-manager-ws/shopping-manager-ws.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping-parent/shopping-page-ws/shopping-page-ws.iml" filepath="$PROJECT_DIR$/shopping-parent/shopping-page-ws/shopping-page-ws.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-parent/shopping-parent.iml" filepath="$PROJECT_DIR$/shopping-parent/shopping-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-parent/shopping-pojo/shopping-pojo.iml" filepath="$PROJECT_DIR$/shopping-parent/shopping-pojo/shopping-pojo.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-parent/shopping-search-ws/shopping-search-ws.iml" filepath="$PROJECT_DIR$/shopping-parent/shopping-search-ws/shopping-search-ws.iml" />
